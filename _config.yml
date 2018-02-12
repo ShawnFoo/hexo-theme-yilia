@@ -2,22 +2,21 @@
 
 menu:
   主页: /
-  随笔: /tags/随笔/
 
 # SubNav
 subnav:
-  github: "#"
-  weibo: "#"
-  rss: "#"
-  zhihu: "#"
+  github: "https://github.com/ShawnFoo"
+  # weibo: "#"
+  # rss: "#"
+  # zhihu: "#"
   #qq: "#"
   #weixin: "#"
-  #jianshu: "#"
+  jianshu: "https://www.jianshu.com/u/b0340e25d39c"
   #douban: "#"
   #segmentfault: "#"
   #bilibili: "#"
   #acfun: "#"
-  #mail: "mailto:litten225@qq.com"
+  mail: "fu4904@gmail.com"
   #facebook: "#"
   #google: "#"
   #twitter: "#"
@@ -32,10 +31,12 @@ root: /
 
 # Content
 
-# 文章太长，截断按钮文字
-excerpt_link: more
-# 文章卡片右下角常驻链接，不需要请设置为false
-show_all_link: '展开全文'
+# 当没有设置excerpt时, 自动摘要截取行数, 关闭自动摘要可设置为0
+auto_excerpt_lines: 3
+# 原文没有完全展示时, 右下角按钮跳转文案
+show_all_link: '查看更多'
+# 原文已完全展示时, 右下角按钮跳转文案
+show_original: '查看原文'
 # 数学公式
 mathjax: false
 # 是否在新窗口打开链接
@@ -47,9 +48,9 @@ reward_type: 2
 # 打赏wording
 reward_wording: '谢谢你请我吃糖果'
 # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
-alipay: 
+alipay:
 # 微信二维码图片地址
-weixin: 
+weixin:
 
 # 目录
 # 目录设定：0-不显示目录； 1-文章对应的md文件里有toc:true属性，才有目录； 2-所有文章均显示目录
@@ -116,15 +117,10 @@ slider:
 #  friends: false
 smart_menu:
   innerArchive: '所有文章'
-  friends: '友链'
+  friends: false
   aboutme: '关于我'
 
-friends:
-  友情链接1: http://localhost:4000/
-  友情链接2: http://localhost:4000/
-  友情链接3: http://localhost:4000/
-  友情链接4: http://localhost:4000/
-  友情链接5: http://localhost:4000/
-  友情链接6: http://localhost:4000/
+# friends:
+#   友情链接1: http://localhost:4000/
 
 aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家

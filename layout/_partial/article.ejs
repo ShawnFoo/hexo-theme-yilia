@@ -1,6 +1,6 @@
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %> <%if(index){%> article-index<%}%>" itemscope itemprop="blogPost">
   <div class="article-inner">
-    <% if (post.link || post.title){ %>
+    <% if (post.link || post.title) { %>
       <header class="article-header">
         <%- partial('post/title', {class_name: 'article-title'}) %>
         <% if (!post.noDate){ %>
@@ -8,16 +8,30 @@
         <% } %>
       </header>
     <% } %>
+    <% var showMore = false %>
     <div class="article-entry" itemprop="articleBody">
-      <% if (post.excerpt && index){ %>
-        <%- post.excerpt %>
-        <% if (theme.excerpt_link) { %>
-          <a class="article-more-a" href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %> >></a>
+      <% if (index) { %>
+        <% if (post.excerpt) { %>
+          <%- post.excerpt %>
+          <% showMore = true %>
+        <% } else if ((typeof theme.auto_excerpt_lines === 'number') && (theme.auto_excerpt_lines > 0)) { %>
+          <% var numOfBreaks = 0 %>
+          <% var index = 0 %>
+          <% for (i = 0; i < post.content.length; i++) { %>
+            <% index++ %>
+            <% if (post.content[i] === '\n') { %>
+              <% if (++numOfBreaks >= theme.auto_excerpt_lines) { %>
+                <% break %>
+              <% } %>
+            <% } %>
+          <% } %>
+          <% showMore = numOfBreaks >= theme.auto_excerpt_lines %>
+          <% let excerptContent = showMore ? (post.content.substring(0, index)) : post.content %>
+          <%- excerptContent %>
         <% } %>
       <% } else { %>
         <%- post.content %>
       <% } %>
-
       <% if ((theme.reward_type === 2 || (theme.reward_type === 1 && post.reward)) && !index){ %>
         <div class="page-reward">
           <a href="javascript:;" class="page-reward-btn tooltip-top">
@@ -60,9 +74,9 @@
       <% } %>
       <%- partial('post/tag') %>
       <%- partial('post/category') %>
-      <% if (index && theme.show_all_link){ %>
+      <% if (index) { %>
         <p class="article-more-link">
-          <a class="article-more-a" href="<%- url_for(post.path) %>"><%= theme.show_all_link %> >></a>
+          <a class="article-more-a" href="<%- url_for(post.path) %>"><%= showMore ? theme.show_all_link : theme.show_original %> >></a>
         </p>
       <% } %>
 
@@ -87,7 +101,7 @@
       url: config.url+url_for(post.path)
     }) %>
   <% } %>
-  
+
   <% if (theme.wangyiyun){ %>
   <%- partial('post/wangyiyun', {
       key: post.slug,
