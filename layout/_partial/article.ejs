@@ -76,7 +76,7 @@
       <%- partial('post/category') %>
       <% if (index) { %>
         <p class="article-more-link">
-          <a class="article-more-a" href="<%- url_for(post.path) %>"><%= showMore ? theme.show_all_link : theme.show_original %> >></a>
+          <a class="article-more-a" href="<%- url_for(post.path) %>"><%= showMore ? theme.show_all_link : theme.show_original %>-></a>
         </p>
       <% } %>
 
