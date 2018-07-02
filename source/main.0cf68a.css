@@ -342,6 +342,10 @@ progress {
 	display: none
 }
 
+a.article-nav-link-wrap {
+	color: #4d4d4d;
+}
+
 a {
 	background: 0 0;
 	color: #08c;
