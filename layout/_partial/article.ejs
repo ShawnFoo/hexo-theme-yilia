@@ -10,7 +10,7 @@
     <% } %>
     <% var showMore = false %>
     <div class="article-entry" itemprop="articleBody">
-      <% if (index) { %>
+      <% if (!is_post() && post.content.length > 0) { %>
         <% if (post.excerpt) { %>
           <%- post.excerpt %>
           <% showMore = true %>
@@ -32,7 +32,7 @@
       <% } else { %>
         <%- post.content %>
       <% } %>
-      <% if ((theme.reward_type === 2 || (theme.reward_type === 1 && post.reward)) && !index){ %>
+      <% if (is_post() && (theme.reward_type === 2 || (theme.reward_type === 1 && post.reward))){ %>
         <div class="page-reward">
           <a href="javascript:;" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
@@ -66,7 +66,7 @@
       <% } %>
     </div>
     <div class="article-info article-info-index">
-      <%if(post.top){%>
+      <% if (post.top) { %>
         <div class="article-pop-out tagcloud">
           <i class="icon-tuding"></i>
           <a class="article-tag-list-link color3">置顶</a>
@@ -74,26 +74,25 @@
       <% } %>
       <%- partial('post/tag') %>
       <%- partial('post/category') %>
-      <% if (index) { %>
+      <% if (!is_post()) { %>
         <p class="article-more-link">
           <a class="article-more-a" href="<%- url_for(post.path) %>"><%= showMore ? theme.show_all_link : theme.show_original %>-></a>
         </p>
       <% } %>
 
-      <% if (!index && theme.share_jia){ %>
+      <% if (is_post() && theme.share_jia){ %>
         <%- partial('post/share') %>
       <% } %>
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-<% if (!index){ %>
+<% if (is_post()){ %>
   <%- partial('post/nav') %>
 <% } %>
 <%- partial('_partial/aside') %>
 
-
-<% if (!index && post.comments){ %>
+<% if (is_post() && post.comments){ %>
   <% if (theme.duoshuo){ %>
   <%- partial('post/duoshuo', {
       key: post.slug,
