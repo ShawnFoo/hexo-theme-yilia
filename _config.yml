@@ -5,7 +5,7 @@ menu:
 
 # SubNav
 subnav:
-  github: "https://github.com/ShawnFoo"
+  ghub: "https://github.com/ShawnFoo" #github
   # weibo: "#"
   # rss: "#"
   # zhihu: "#"
