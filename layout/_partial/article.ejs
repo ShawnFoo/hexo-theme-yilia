@@ -8,9 +8,9 @@
         <% } %>
       </header>
     <% } %>
-    <% var showMore = false %>
+    <% var showMore = false; var hasContent = post.content.length > 0; %>
     <div class="article-entry" itemprop="articleBody">
-      <% if (!is_post() && post.content.length > 0) { %>
+      <% if (!is_post() && hasContent) { %>
         <% if (post.excerpt) { %>
           <%- post.excerpt %>
           <% showMore = true %>
@@ -32,7 +32,10 @@
       <% } else { %>
         <%- post.content %>
       <% } %>
-      <% if (is_post() && (theme.reward_type === 2 || (theme.reward_type === 1 && post.reward))){ %>
+      <% if(is_post() && hasContent && !theme.copyright_hidden) { %>
+            <%- partial('copyright', null, {cache: !config.relative_link}) %>
+      <% } %>
+      <% if (is_post() && hasContent && (theme.reward_type === 2 || (theme.reward_type === 1 && post.reward))){ %>
         <div class="page-reward">
           <a href="javascript:;" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
@@ -80,8 +83,8 @@
         </p>
       <% } %>
 
-      <% if (is_post() && theme.share_jia){ %>
-        <%- partial('post/share') %>
+      <% if (is_post() && hasContent && theme.share_jia){ %>
+        <%- partial('post/share', null, {cache: !config.relative_link}) %>
       <% } %>
       <div class="clearfix"></div>
     </div>
@@ -89,8 +92,10 @@
 </article>
 <% if (is_post()){ %>
   <%- partial('post/nav') %>
+  <% if (hasContent) { %>
+    <%- partial('_partial/aside', null, {cache: !config.relative_link}) %>
+  <% } %>
 <% } %>
-<%- partial('_partial/aside') %>
 
 <% if (is_post() && post.comments){ %>
   <% if (theme.duoshuo){ %>
