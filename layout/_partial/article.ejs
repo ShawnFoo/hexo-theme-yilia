@@ -3,9 +3,7 @@
     <% if (post.link || post.title) { %>
       <header class="article-header">
         <%- partial('post/title', {class_name: 'article-title'}) %>
-        <% if (!post.noDate){ %>
-        <%- partial('post/date', {class_name: 'archive-article-date', date_format: null}) %>
-        <% } %>
+        <%- partial('post/right-header') %>
       </header>
     <% } %>
     <% var showMore = false; var hasContent = post.content.length > 0; %>

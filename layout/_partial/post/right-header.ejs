@@ -1,0 +1,15 @@
+<% if (is_home()) { %>
+<a href="<%- url_for(post.path) %>" class="archive-article-date">
+<% } else { %>
+<div class="archive-article-date">
+<% } %>
+    <span class="post-count">全文字数: <%= wordcount(post.content) %></span>
+    | <span class="post-count">预计阅读: <%= min2read(post.content) %>分钟</span>
+    <% if (!post.noDate){ %>
+    | <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished">日期: <%= date(post.date, null) %></time>
+    <% } %>
+<% if (is_home()) { %>
+</a>
+<% } else { %>
+</div>
+<% } %>

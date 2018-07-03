@@ -1243,7 +1243,8 @@ pre .css~* .id,pre .id {
 .archive-article-date {
 	float: right;
 	margin-right: 7.6923%;
-	color: #999
+	color: #999;
+	font-size: 14px;
 }
 
 .archive-article-date .icon {
