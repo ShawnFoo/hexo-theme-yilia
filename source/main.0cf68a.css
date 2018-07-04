@@ -4008,3 +4008,16 @@ a.pswp__share--download:hover {
 	color: #ccc;
 	text-decoration: underline
 }
+
+.post-copyright {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px dashed #e6e6e6;
+
+  .copyright-item {
+    margin: 5px 0;
+    a {
+      color: #4d4d4d;
+    }
+  }
+}
