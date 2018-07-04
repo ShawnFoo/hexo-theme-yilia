@@ -1,7 +1,8 @@
 # Header
 
 menu:
-  主页: /
+  主页君: /
+  关于我: /about
 
 # SubNav
 subnav:
@@ -70,7 +71,7 @@ google_analytics: ''
 favicon: /favicon.ico
 
 #你的头像url
-avatar: https://avatars.githubusercontent.com/u/8295070?v=3
+avatar: http://wx1.sinaimg.cn/mw690/9161297cly1fsy4w63iyoj20kv0lbgrt.jpg
 
 # 文章内容底部版权是否隐藏
 copyright_hidden: false
@@ -112,7 +113,7 @@ style:
 # slider的设置
 slider:
   # 是否默认展开tags板块
-  showTags: false
+  showTags: true
 
 # 智能菜单
 # 如不需要，将该对应项置为false
@@ -120,7 +121,7 @@ slider:
 #smart_menu:
 #  friends: false
 smart_menu:
-  innerArchive: '所有文章'
+  innerArchive: '全部文章 / 标签 / 搜索'
   # aboutme: '关于我'
 
 # friends:

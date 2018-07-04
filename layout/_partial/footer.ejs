@@ -1,8 +1,19 @@
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
 <footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-center">
-    		&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
+    		&copy; <%= date(new Date(), 'YYYY') %> | <%= config.author || config.title %>
+        <% if (is_home()) { %>
+          <span id="busuanzi_container_site_uv" style='display:none'>
+            | 您是本站第<span id="busuanzi_value_site_uv"></span>位访问者
+          </span>
+        <% } else { %>
+          <span id="busuanzi_container_page_pv" style='display:none'>
+            | 本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+          </span>
+        <% } %>
     	</div>
     </div>
   </div>

@@ -26,7 +26,7 @@
     <%if(hasInnerArchive){%>
     	<section class="tools-section tools-section-all" q-show="innerArchive">
         <div class="search-wrap">
-          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <input class="search-ipt" q-model="search" type="text" placeholder="输入要搜索的内容">
           <i class="icon-search icon" q-show="search|isEmptyStr"></i>
           <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
         </div>
@@ -36,11 +36,15 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-            <% site.tags.forEach(function(tag, i){ %> 
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color<%= tag.name.length % 5 + 1 %>"><%-tag.name%></a>
-              </li>
-            <% }) %>
+            <% if (site.tags.length > 0) { %>
+              <% site.tags.forEach(function(tag, i){ %>
+                <li class="article-tag-list-item">
+                  <a href="javascript:void(0)" class="js-tag color<%= tag.name.length % 5 + 1 %>"><%-tag.name%></a>
+                </li>
+              <% }) %>
+            <% } else { %>
+                <li>Tag是不会打的, 这辈子都不会打Tag...</li>
+            <% } %>
             <div class="clearfix"></div>
           </ul>
         </div>
@@ -106,5 +110,5 @@
     	</section>
     <%}%>
   </div>
-  
+
 </div>
