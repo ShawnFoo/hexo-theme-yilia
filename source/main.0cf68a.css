@@ -2521,7 +2521,7 @@ pre .css~* .id,pre .id {
 .page-reward .reward-type {
 	display: block;
 	margin: 20px 0 0;
-	color: #4d4d4d;
+	color: #FFF;
 	font-size: 1pc
 }
 
@@ -2857,7 +2857,7 @@ pre .css~* .id,pre .id {
 }
 
 .tooltip-top .tooltip-inner {
-	padding: 40px;
+	padding: 20px;
 	background: #4d4d4d;
 	transition: -webkit-transform .3s;
 	transition: transform .3s;
