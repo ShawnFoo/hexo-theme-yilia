@@ -2614,7 +2614,8 @@ pre .css~* .id,pre .id {
 }
 
 .toc-container.tooltip-left:hover {
-	background: #4d4d4d
+	background: #000;
+	opacity: 1.0;
 }
 
 .toc-container.tooltip-left .icon-font {
@@ -2639,6 +2640,7 @@ pre .css~* .id,pre .id {
 	min-height: 75pt;
 	text-align: left;
 	font-size: 14px;
+	text-shadow: 1px 1px 1px #666;
 	-webkit-transform: translate3d(0,-10px,0) rotate3d(1,1,1,-30deg);
 	transform: translate3d(0,-10px,0) rotate3d(1,1,1,-30deg);
 	-webkit-transform-origin: 100% 100%;
