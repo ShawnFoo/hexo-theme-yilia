@@ -2334,7 +2334,7 @@ pre .css~* .id,pre .id {
 	float: right
 }
 
-#SOHUCS,#disqus_thread,#gitment-ctn,.cloud-tie-wrapper,.duoshuo {
+#lv-container,#SOHUCS,#disqus_thread,#gitment-ctn,.cloud-tie-wrapper,.duoshuo {
 	padding: 0 30px!important;
 	min-height: 20px
 }
@@ -2534,7 +2534,7 @@ pre .css~* .id,pre .id {
 
 .wrap-side-operation {
 	position: fixed;
-	top: 30%;
+	top: 65%;
 	right: 40px;
 	z-index: 999;
 	font-size: 14px
