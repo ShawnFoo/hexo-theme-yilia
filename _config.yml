@@ -92,7 +92,7 @@ wangyiyun: false
 changyan_appid: false
 changyan_conf: false
 #4、Disqus 在hexo根目录的config里也有disqus_shortname字段，优先使用yilia的
-disqus: false
+disqus: https://shawnfoo.disqus.com/embed.js
 #5、Gitment
 gitment_owner: false      #你的 GitHub ID
 gitment_repo: ''          #存储评论的 repo

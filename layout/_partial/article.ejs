@@ -94,6 +94,11 @@
     <%- partial('_partial/aside') %>
   <% } %>
 <% } %>
-<% if (is_post() && post.comments && theme.livere){ %>
-    <%- partial('post/livere') %>
+<% if (is_post() && post.comments){ %>
+  <% if (theme.disqus){ %>
+      <%- partial('post/disqus') %>
+  <% } %>
+  <% if (theme.livere){ %>
+      <%- partial('post/livere') %>
+  <% } %>
 <% } %>
