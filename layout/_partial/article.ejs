@@ -31,7 +31,7 @@
         <%- post.content %>
       <% } %>
       <% if(is_post() && hasContent && !theme.copyright_hidden) { %>
-            <%- partial('post/copyright', null, {cache: !config.relative_link}) %>
+            <%- partial('post/copyright') %>
       <% } %>
       <% if (is_post() && hasContent && (theme.reward_type === 2 || (theme.reward_type === 1 && post.reward))){ %>
         <div class="page-reward">
