@@ -7,8 +7,9 @@ menu:
 # SubNav
 subnav:
   ghub: "https://github.com/ShawnFoo" #github
-  jianshu: "https://www.jianshu.com/u/b0340e25d39c"
   juejin: "https://juejin.im/user/58b2b750ac502e0069d88538"
+  jianshu: "https://www.jianshu.com/u/b0340e25d39c"
+  rss: /atom.xml
   # weibo: "#"
   # rss: "#"
   # zhihu: "#"
@@ -24,8 +25,6 @@ subnav:
   #twitter: "#"
   #linkedin: "#"
 
-rss: /atom.xml
-
 # 是否需要修改 root 路径
 # 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，
 # 请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。
@@ -34,7 +33,7 @@ root: /
 # Content
 
 # 当没有设置excerpt时, 自动摘要截取行数, 关闭自动摘要可设置为0
-auto_excerpt_lines: 3
+auto_excerpt_lines: 5
 # 原文没有完全展示时, 右下角按钮跳转文案
 show_all_link: '查看更多'
 # 原文已完全展示时, 右下角按钮跳转文案
