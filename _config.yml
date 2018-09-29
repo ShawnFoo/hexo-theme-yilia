@@ -49,9 +49,9 @@ reward_type: 2
 # 打赏wording
 reward_wording: '谢谢看官打赏!'
 # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
-alipay: http://wx4.sinaimg.cn/large/9161297cly1ft1qb7kcfgj20c90cbdiw.jpg
+alipay: /img/alipay.jpg
 # 微信二维码图片地址
-weixin: http://wx3.sinaimg.cn/large/9161297cly1ft1qb32a9zj20br0br0ui.jpg
+weixin: /img/weixin.jpg
 
 # 目录
 # 目录设定：0-不显示目录； 1-文章对应的md文件里有toc:true属性，才有目录； 2-所有文章均显示目录
@@ -69,7 +69,7 @@ baidu_analytics: '5cc666f34ff3361c9c45af8b343db782'
 favicon: /favicon.ico
 
 #你的头像url
-avatar: http://wx1.sinaimg.cn/mw690/9161297cly1fsy4w63iyoj20kv0lbgrt.jpg
+avatar: /img/avatar.jpg
 
 # 文章内容底部版权是否隐藏
 copyright_hidden: false
