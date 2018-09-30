@@ -33,7 +33,7 @@ root: /
 # Content
 
 # 当没有设置excerpt时, 自动摘要截取行数, 关闭自动摘要可设置为0
-auto_excerpt_lines: 5
+auto_excerpt_lines: 6
 # 原文没有完全展示时, 右下角按钮跳转文案
 show_all_link: '查看更多'
 # 原文已完全展示时, 右下角按钮跳转文案
@@ -102,9 +102,9 @@ gitment_oauth:
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
   # 头像上面的背景颜色
-  header: '#4d4d4d'
+  header: '#2A2B31'
   # 右滑板块背景
-  slider: 'linear-gradient(200deg,#4d4d4d,#C7CACE)'
+  slider: 'linear-gradient(200deg,#2A2B31,#C7CACE)'
 
 # slider的设置
 slider:
