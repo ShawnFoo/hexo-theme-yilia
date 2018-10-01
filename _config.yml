@@ -102,9 +102,9 @@ gitment_oauth:
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
   # 头像上面的背景颜色
-  header: '#2A2B31'
+  header: '#2B3C55'
   # 右滑板块背景
-  slider: 'linear-gradient(200deg,#2A2B31,#C7CACE)'
+  slider: 'linear-gradient(200deg,#2B3C55,#C7CACE)'
 
 # slider的设置
 slider:
